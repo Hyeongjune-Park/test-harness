@@ -14,3 +14,7 @@ export function insertTask(task: Task): Task {
 export function clearTasks(): void {
   tasks.length = 0;
 }
+
+export function findTaskById(id: string): Task | null {
+  return tasks.find((t) => t.id === id) ?? null;
+}
